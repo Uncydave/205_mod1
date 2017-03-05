@@ -56,7 +56,16 @@ def roseColoredGlasses():
     setBlue(p,blue*.5)
   repaint(pic)
     
-
+#David
+#Every RGB color is defined as an integer value between 0-255. By subtracting the current color value from 255, you get the inverse of that color.
+def makeNegative():
+ pic = get_pic()
+ pixels = getPixels(pic)
+ for p in pixels:
+  setRed(p, 255 - getRed(p))
+  setGreen(p, 255 - getGreen(p)) 
+  setBlue(p, 255 - getBlue(p))
+ repaint(pic)
 
 
 
